@@ -1,21 +1,15 @@
-const cors = require("cors");
-app.use(cors());
-const API = "https://nexinvoice-api.onrender.com";
 const express = require("express");
 const cors = require("cors");
 const supabase = require("./supabase");
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
+// TEST ROUTE
 app.get("/", (req, res) => {
   res.send("NexInvoice API Running 🚀");
-});
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log("Server running on port " + PORT);
 });
 
 // CREATE CUSTOMER
@@ -38,5 +32,9 @@ app.get("/customers", async (req, res) => {
   res.json({ data, error });
 });
 
+// PORT
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log("Server running on " + PORT));
+
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
+});
