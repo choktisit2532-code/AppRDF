@@ -9,9 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// TEST
 app.get("/", (req, res) => {
-  res.send("NexInvoice API Running");
+  res.send("NexInvoice API Running 🚀");
 });
 
 // CREATE CUSTOMER
