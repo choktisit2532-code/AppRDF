@@ -12,6 +12,11 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("NexInvoice API Running 🚀");
 });
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
+});
 
 // CREATE CUSTOMER
 app.post("/customers", async (req, res) => {
