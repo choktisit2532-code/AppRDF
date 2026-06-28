@@ -1,3 +1,4 @@
+const API = "https://nexinvoice-api.onrender.com";
 const express = require("express");
 const cors = require("cors");
 const supabase = require("./supabase");
