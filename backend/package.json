@@ -1,7 +1,7 @@
 {
-{
   "name": "nexinvoice-backend",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "engines": {
     "node": "22.x",
@@ -11,5 +11,18 @@
     "start": "node server.js",
     "dev": "node --watch server.js",
     "create-admin": "node scripts/create-admin.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "decimal.js": "^10.6.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.21.0",
+    "socket.io": "^4.8.3",
+    "zod": "^4.4.3"
   }
 }
